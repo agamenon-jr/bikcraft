@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
+     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Bikcraft - Bicicletas Elétricas</title>
@@ -12,27 +11,32 @@
 </head>
 
 <body>
-  <!-- tag fora com o backgroud -->
-  <header class="header-bg">
+    
+<header class="header-bg"><!-- quando tenho um bg é pq tem um background de ponta a ponta -->
+    <div class="header"> <!-- <div> vai segurar o container, se te, ui,  container sempre vai precisar de uma div para colocar o um background de ponta a ponta;-->
+        <!-- "./" leva p/ a home da página -->
+        <a href="./">
+            <img src="./img/bikcraft.svg" alt=" Bikcraft">
+        </a>
 
-    <!-- tag dentro com o container; essa 'div' serve p/ segurar o container -->
-    <div class="header">  
-      <!-- ./ significa a home do site; -->
-      <a href="./">
-        <img src="./img/bikcraft.svg" alt="Bikcraft">
-      </a> 
-      
-      <nav aria-label="primaria">
-        <ul class="header-menu">
-          <li><a href="./bicicletas.html">Bicicletas</a></li>
-          <li><a href="./seguros.html">Seguros</a></li>
-          <li><a href="./contatos.html">Contatos</a></li>
-        </ul>
-      </nav>
-      
-     </div>
+        <nav aria-label="principal">
+            <ul class="header-menu">
+                <li><a href="./bicicletas.html">Bicicletas</a></li>
+                <li><a href="./seguros.html">Seguros</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-  </header>
+   
+<main class="introducao-bg"> <!-- Aqui tenho um background de ponta a ponta -->
+    <div class="introducao">
+        <h1>Bicicletas feitas sob medida.</h1>
+        <p>Bicicletas elétricas de alta precisão e qualidade, feita sob medida para você. Explore o mundo na sua velocidade com a Bikcraft.</p>
+        
+    </div>    
+</main>
+    
 </body>
-
 </html>

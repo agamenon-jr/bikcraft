@@ -1,92 +1,42 @@
-body {
-  margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-ul {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-
-a {
-  text-decoration: none;
+a{
+    text-decoration: none;
 }
 
-.header-bg {
-  background-color: #000;
+.header-bg{
+    background-color: #000000;
 }
 
-.header {
-  display: flex;
-  flex-wrap: wrap; /*significa que vai quebrar quando ñ caber um ao lado do outro;*/
-  gap: 1.25rem;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box; /*Faz com que o valor de 'padding' ñ some ao 'max-width';*/
-  padding: 1.25rem;
-  max-width: 75rem; /* agora ele já contando com os valores de padding;*/
-  margin-left: auto; /*Agora quanto o site ficas grnade ele sempre fica alinhado ao centro*/
-  margin-right: auto; /*Agora quanto o site ficas grnade ele sempre fica alinhado ao centro*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;/*Ele faz c/ q/ o valor de padding ñ some, por isso coloco 1220px e ele já vai está somando com os valores de padding*/
+    padding: 1.25rem;
+    max-width: 75rem;
+    margin-left: auto; /*p/ alinhar ao centro, é preciso definir as margens de auto, agora quando ele crescer acima do container ele vai ficando sempre ao centro*/
+    margin-right: auto;
 }
 
-.header-menu {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.5rem;
+.header-menu{
+    display: flex;
+    gap: 2.5rem;
 }
 
-.header-menu a {
-  color: #fff;
-  display: inline-block;
-  padding: 16px 0px; /*P/ aumentar a área de cointato do click e do dedo;*/
-  font-size: 1.125rem;
-  border-radius: 4px;
-  position: relative;
-}
-
-.header-menu a:after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 0px;
-  background-color: #fff;
-  margin-top: 4px;
-  transition: 0.3s;
-  position: absolute;/*aqui tiro o afeto do do fluxo e tuido volta a ficar alinhado ao centro com a img bikcraft;*/
-}
-
-.header-menu a:hover:after {
-  width: 100%; /*fica do tamanho do conteúdo pai*/
-}
-
-@media (max-width: 800px) {
-  .header-menu {
-    gap: 1.25rem;
-  }
-  .header-menu a {
-    background-color: #111;
-    padding: 12px 16px;
-    border-radius: 4px;
-  }
-  .header-menu a:hover {
-    background-color: #2e2e2e;
-  }
-  .header a::after {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .header-menu {
-    gap: 12px;
-  }
-  .header-menu a {
-    padding: 8px 12px;
-    font-size: 40px;
-  }
-  .header-menu a:hover {
-    background-color: #2e2e2e;
-  }
+.header-menu a{
+    color: #ffffff;
+    display: inline-block;/* defino assim pq por padrão, quando um item cair abaixo do outro, o padding ñ vai pegar direitinho, pq esse elemento é inline;*/
+    padding: 1.25rem 0;/*esse padding foi colocado para dar espaçamento vertical ao link, desta forma aumentando a área de clique/contato*/
+    font-size: 1.125rem;
 }
