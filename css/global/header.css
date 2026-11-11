@@ -23,11 +23,8 @@
 
 .header-menu a{
     display: inline-block;/* defino assim pq por padrão, quando um item cair abaixo do outro, o padding ñ vai pegar direitinho, pq esse elemento é inline;*/
-    padding: 1.25rem 0;/*esse padding foi colocado para dar espaçamento vertical ao link, desta forma aumentando a área de clique/contato*/
-    font-size: 1.125rem;
-    position: relative;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    padding: 1.25rem 0;/*esse padding foi colocado para dar espaçamento vertical ao link, desta forma aumentando a área de clique/contato*/    
+    position: relative;   
 }
 
 .header-menu a:after {

@@ -1,13 +1,87 @@
-.texto-grande {
-    font-size: 4rem;
-    line-height: 1.125;/*vou deixar o line-height relativo ao font-size, p/ isso divido line-height pelo font-size 72/64=1.125*/
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+.font-1-xs{
+    font: 400 0.75rem/1.35 "Poppins", sans-serif;
 }
 
-.texto-medio{
+.font-1-s {
+  font: 400 1rem/1.5 "Poppins", sans-serif;
+}
+
+.font-1-m,
+.font-1-m-b {
+  font: 500 1.125rem/1.35 "Poppins", sans-serif;
+}
+
+.font-1-m-b {/*assim mudo só o peso*/
+  font-weight: 600;
+}
+
+.font-1-l {
+  font: 400 1.5rem/1.5 "Poppins", sans-serif;
+}
+
+.font-1-xl {
+  font: 600 2rem/1.25 "Poppins", sans-serif;
+}
+
+.font-1-xxl {
+/*na aula 1011 ele ensina uma técnica alternativa para deixar esse código mais curto
+
+    font-size: 4rem;    Colocando tudo em REM p/ ser relativo a raiz do site do root, q/ é 16 pixels, pq caso o usuário aumente aqui tbm vai aumentar.
+
+    line-height: 1.125;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+Sempre começa pelo peso, aqui é 600 | depois vem o tamanho da fonte 4rem | p/ usar o line-height muda um pouco vc tem que colocar uma barra / e escreve o line-height | e por ultimo vem a familia font-family "Poppins", sans-serif;*/
+    
+  font: 600 4rem/1.125 "Poppins", sans-serif;    
+}
+
+
+.font-2-xs {
+  font: 400 0.875rem/1.43 "Roboto", sans-serif;
+}
+
+.font-2-s {
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+}
+
+.font-2-m {
+  font: 500 1.125rem/1.35 "Roboto", sans-serif;
+}
+
+.font-2-l,
+.font-2-l-b {
+  font: 400 1.5rem/1.5 "Roboto", sans-serif;
+}
+
+.font-2-l-b {
+  font-weight: 500;
+  letter-spacing: 0.015em;/*ele está usando Em pq está fazendo em relação ao tamanhoda  tipogrtafia*/
+  text-transform: uppercase;
+}
+
+.font-2-xl {
+  font: 500 2rem/1.25 "Roboto", sans-serif;
+}
+
+
+@media (max-width: 1200px) {
+  .font-1-xxl {
+    font-size: 3rem;
+  }
+  .font-2-l,
+  .font-2-l-b {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .font-1-xxl {
+    font-size: 2rem;
+  }
+  .font-1-xl,
+  .font-2-xl {
     font-size: 1.5rem;
-    line-height: 1.5;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+  }
 }
