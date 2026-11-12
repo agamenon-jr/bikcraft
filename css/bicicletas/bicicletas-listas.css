@@ -1,0 +1,68 @@
+.bicicletas-lista{
+    padding-top: 3.75rem;
+    padding-bottom: 7.5rem;
+}
+
+.bicicletas-lista h2 {
+    margin-bottom: 2.5rem;
+}
+
+.bicicletas-lista ul {
+    display: flex;
+    gap: 2.5rem;
+    padding: 0 1.125rem 1.125rem 1.125rem;
+    max-width: 87.5rem; /*quando tenho max-width tenho q/ definir as margin-left e margin-right como auto, p/ centralizar a lista*/
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;/*cria uma barra de rolagem horizontal apenas p/ essa área e ñ p/ o site todo, definindo como overflow-x: auto ele vai criar uma barra de scroll apenas no eixo X q/ é horizontal*/
+}
+
+/*Ñ qro q/ os elementos diminuam + do q/ já estão aqui, então falo c/ cada li (lembrando q/ li é o elemento flexível pq o pai (q/ é display flex o UL) q/ estão dentro do UL, */
+.bicicletas-lista li{
+    flex: 1; 
+    min-width: 17.5rem;/*cria um scrou p/ todo o site mas qro apenas p essa área, vou definir um flex-wrap no .bicicletas-lista ul p/ ele quebrar tbm*/
+}
+
+.bicicletas-lista a {
+/*Como o 'a' está envolvendo todos os elementos quando eu aperto TAB ele seleciona tudo (pq ele é um elemento inline) e ñ qro assim, então defino ele como display: block;*/
+    display: block;
+}
+
+.bicicletas-lista img {
+    margin-bottom: 1rem;
+}
+
+.bicicletas-lista h3 {
+    margin-bottom: 0.25rem;
+    display: flex;/*vai centralizar o elemento h3::before*/
+    align-items: center;
+}
+
+.bicicletas-lista h3::before {
+    content: '';
+    display: inline-block;
+    height: 0.6rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    background-color: var(--cor-p1);
+    margin-bottom: 0.25rem;
+    transition: width 0.3s;/*vai fazer a animação do width do h3::before q/ é o quadradinho amarelo, estou dizendo q/ vou animar APENAS o width por isso coloquei assim transition: width e definir o tempo de 0.3s*/
+}
+
+.bicicletas-lista a:hover h3::before {
+    width: 1.5rem;
+}
+
+/*Definindo o preço alinhado ao h3, ñ posso por span direito se ñ vai mexer com todos, e faço a soma da largua q/ é width + margin-bottom do .bicicletas-lista h3::before*/
+.bicicletas-lista li span{
+    padding-left: 1.6rem;
+}
+
+@media (max-width: 800px) {
+    .bicicletas-lista {
+        padding-bottom: 3.75rem;
+    }
+    .bicicletas-lista ul {
+        gap: 2.5rem;
+    }
+}

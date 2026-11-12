@@ -8,6 +8,9 @@ body{
 }
 
 h1, 
+h2,
+h3,
+h4,
 ul, 
 p{
   margin: 0;
@@ -26,4 +29,8 @@ a{
 img{
     max-width: 100%;
     display: block;
+}
+
+img[src$=".jpg"]{
+    border-radius: 0.5rem;/*desta forma ele arredonda as bordas das imagens SVGs e ñ quero qro apenas p/ as JPEGs, devo criar uim seletor de atribulto usando o img[src$=".jpg"]*/
 }
