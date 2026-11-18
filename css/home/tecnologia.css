@@ -1,0 +1,94 @@
+.tecnologia-bg{
+    background-color: var(--cor-11);
+    box-shadow: inset 0 80px var(--cor-0), inset 0 -80px var(--cor-0);
+    /*p/ criar uma sobra e parecer que imagem está em relevo (vazando) | o 0 representa a cor do fundo ñ vai nem p/ um lado nem p/ o outro e 80px de cima e -80px p/ baixo, para colocar duas sombrar é só colcoar uma (,) e acrescentar a outra | após tudo isso tenho que andar c/ o conteúdo se ñ ele fica na sombra tbm*/
+}
+
+.tecnologia{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.tecnologia-imagem img{
+    width: 100%;/*Digo q/ width vai usar 100% máximo do container*/
+    height: 100%; /*P/ ter sempre a altura máxima do container, só q/ ele vai esmagar as ferramentas então defino um object-fit = cover*/
+    object-fit: cover;/*ele vai cobrir todo o espaço disponível sem distorcer a imagem*/
+    object-position: left;/*digo onde q/ a imagem vai iniciar o corte neste caso da direita para a esquerda | se eu quisesse q/ a foto tivesse sempre o tamanho do conteúdo certinho, o ideal seria eu coilocar ela dentra de uma div c/ um background e ñ uma imagem, pois img ela cresce.*/
+}
+
+/*Andar com o conteúdo para que ele não fique na sombra*/
+.tecnologia-conteudo{
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+/*No CSS, o símbolo > é chamado de seletor de filho direto.
+
+Significa: aplique essas regras aos elementos <span> que são filhos diretos de .tecnologia-conteudo.
+
+Diferença:
+- .tecnologia-conteudo span → seleciona todos os <span> dentro do elemento, mesmo os que estão aninhados.
+
+- .tecnologia-conteudo > span → seleciona somente os <span> que estão diretamente dentro dele.
+
+Resumindo: > significa que o elemento precisa ser filho direto, sem outro elemento entre eles.*/
+.tecnologia-conteudo > span{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.tecnologia-conteudo h2{
+    display: block;
+    margin-bottom: 32px;
+}
+
+.tecnologia-conteudo > p{
+    margin-bottom: 20px;
+}
+
+.tecnologia a{
+    margin-bottom: 80px;
+}
+
+.tecnologia-vantagens{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.tecnologia-vantagens h3{
+    margin-bottom: 8px;
+    width: max-content;/*p/ o h3 ñ ficar com a largura do container e sim com a largura do texto/conteúdo*/
+}
+
+.tecnologia-vantagens img{
+    width:24px;
+    margin-bottom: 8px;
+}
+
+@media (max-width:800px){
+    .tecnologia-bg{
+        box-shadow: initial;
+    }
+    .tecnologia{
+        grid-template-columns: 1fr;
+    }
+    .tercnologia-conteudo{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    /*Como a imagem é só decorativa irei remover-lá*/
+    .tecnologia-imagem{
+        display: none;
+    }
+
+    .tecnologia a{
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width:600px){
+    .tecnologia-vantagens{
+        flex-direction: column;
+    }
+}

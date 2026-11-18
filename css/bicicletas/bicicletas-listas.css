@@ -44,8 +44,7 @@
     height: 0.6rem;
     width: 1rem;
     margin-right: 0.5rem;
-    background-color: var(--cor-p1);
-    margin-bottom: 0.25rem;
+    background-color: var(--cor-p1);    
     transition: width 0.3s;/*vai fazer a animação do width do h3::before q/ é o quadradinho amarelo, estou dizendo q/ vou animar APENAS o width por isso coloquei assim transition: width e definir o tempo de 0.3s*/
 }
 

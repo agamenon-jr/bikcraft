@@ -1,9 +1,9 @@
 .container{
- box-sizing: border-box; /*vai somar os paddings e ficar apenas 87rem*/
+    box-sizing: border-box; /*vai somar os paddings e ficar apenas 87rem*/
     max-width: 75rem;
     padding-left: 1.125rem;
     padding-right: 1.125rem;
-     margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -27,4 +27,23 @@
         padding: 0.75rem 1rem;
         font-size: 1rem;
     }        
+}
+
+.link{
+  display: inline-block;
+  color: var(--cor-p1);
+  font: 500 1.5rem/1.54 "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+.link::after{
+  content: '';
+  display: block;
+  width: 1005;
+  height: 4px;
+  background-color: currentColor;/*irei usara variável currentColor ela vai usar qualquer valor definido na cor pai neste caso o .link, caso eu mude a cor do pai ñ preciso vim aqui e mudo ele muda só autoimático*/
+}
+
+.link:hover{
+  color: var(--cor-0);
 }
