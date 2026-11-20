@@ -1,0 +1,65 @@
+.parceiros{
+    padding-top: 60px; /*como em cima já tenho uma img vazando do bloco anterior, então defino para padding-top apenas 60px*/
+    padding-bottom: 120px;
+}
+
+.parceiros h2{
+    margin-bottom: 60px;
+}
+
+.parceiros ul{
+    padding: 0 20px;
+    max-width: 87.5rem;
+    display: grid;/*Aqui uso o grip pq se eu usar o flex ele n fica alinhado como está e sim de acordo com o conteúdo de cada espaço. Quando qro coluno uso o grid*/
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+}
+
+.parceiros li{
+    display: flex;/*usado para poder colocar um novo 
+    .parceiros img{
+        margin: auto;
+} 
+    e assim ter a certeza de q/ todos os parceiros estaram alinhados*/
+    padding: 32px;
+    border-left: 2px solid var(--cor-2);
+}
+
+.parceiros img{
+    margin: auto;
+}
+
+
+/*p/ remover a barra lateral apenas onde qro;*/
+.parceiros li:first-child,
+.parceiros li:nth-child(5) {
+    border-left: none;
+}
+
+
+/*Desta forma digo q; APARTIR do elemento 5 coloque essa borda no top do 5 elemento até o último*/
+.parceiros li:nth-child(n + 5){
+    border-top: 2px solid var(--cor-2);
+}
+
+
+@media (max-width: 800px){
+    .parceiros{
+        padding-bottom: 3.75rem;
+    }
+    .parceiros h2{
+        margin-bottom: 1.125rem;
+    }
+    .parceiros ul{
+        grid-template-columns:  repeat(2, 1fr);
+    }
+    .parceiros li:nth-child(n + 3){
+    border-top: 2px solid var(--cor-2);
+    }
+
+    /*odd = p/ números ímpares*/
+    .parceiros li:nth-child(odd) {
+    border-left: none;
+}
+
+}
