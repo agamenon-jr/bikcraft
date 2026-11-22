@@ -1,0 +1,25 @@
+.termos {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.termos h2 {
+    font-weight: 600;
+    margin-bottom: 1.125rem;
+}
+
+/* P/ criar uma área maior entre os h2 sem aumentar no 1] h2 pq vai somar com a margin-bottom: 1.125rem; eu digo (.termos p + h2) isso qr dizer q/ vai colocar em todo h2 q/ venha após um p; */
+.termos p + h2 {
+    margin-top: 2.5rem;
+
+}
+.termos p {
+    max-width: 75ch;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    /* 2. Quebra palavras grandes com hífen (exige lang="pt-br" no <html>) */
+    hyphens: auto;
+    -webkit-hyphens: auto;
+
+    /* 3. Permite ajustar levemente o espaço entre letras, não só entre palavras */
+    word-spacing: -0.05em; 
+}
