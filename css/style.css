@@ -4,6 +4,7 @@
 
 /* Bicicletas */
 @import "./bicicletas/bicicletas-listas.css";
+@import "./bicicletas/bicicletas.css";
 
 /* Home */
 @import "./home/introducao.css";
