@@ -1,0 +1,45 @@
+.vantagens-bg {
+    background-color: var(--cor-12);
+    --padding: 7.5rem;
+}
+
+.vantagens {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+
+.vantagens h2 {
+    padding-bottom: 3.5rem;
+}
+
+.vantagens ul {
+    display: grid;
+/*
+Essa linha cria colunas que se reorganizam sozinhas conforme o tamanho da tela, sem você precisar escrever código extra para celular ou computador.
+Imagine que cada coluna é uma "caixa":
+• 280px (mínimo): A caixa nunca fica mais estreita que 280 pixels. Se a tela diminuir e não couberem todas lado a lado, as que sobrarem pulam para a linha de baixo.
+• max-content (máximo): A caixa cresce só o necessário para caber o texto ou imagem dentro dela, sem sobrar espaço vazio inútil.
+• auto-fit: Faz o navegador calcular automaticamente quantas caixas cabem na linha.
+Na prática: É um grid inteligente onde os itens têm pelo menos 280px, crescem conforme o tamanho do próprio conteúdo e quebram de linha sozinhos em telas menores.
+*/
+    grid-template-columns: repeat(auto-fit, minmax(280px, max-content)); 
+    gap: 2.5rem 5rem;
+}
+
+.vantagens h3,
+.vantagens img {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+    .vantagens {
+        --padding: 3.75rem;
+    }
+    .vantagens h2 {
+        margin-bottom: 2.5rem;
+    }
+
+    .vantagens ul {
+        gap: 1.125rem;
+    }
+}
