@@ -6,9 +6,13 @@ só os ímpares
 só os pares 
  .bicicletas-bg:nth-child(even) {
     background: var(--cor-11);
-}*/
+}
+    
 .bicicletas-bg:nth-child(3) {
-    background: var(--cor-11);
+    background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
+} */
+.bicicletas-bg{
+    background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
 }
 
 .bicicletas {
@@ -93,13 +97,20 @@ Agora a baixo irei posicionar usando grid p/ aprender mais opções*/
     place-items: center;
 }
 
-.bicicletas li + li{
-    margin-top: 16px;
-}
-/* Uma outra forma ao .bicicletas li + li ->
 .bicicletas ul {
     display: grid;
     gap: 16px;
+}
+
+
+/* Uma outra forma ao 
+.bicicletas ul {
+    display: grid;
+    gap: 16px;
+} 
+    É
+.bicicletas li + li{
+    margin-top: 16px;
 }
 */
 
@@ -107,4 +118,32 @@ Agora a baixo irei posicionar usando grid p/ aprender mais opções*/
 .bicicletas-conteudo img {
     width: 24px;
     margin-right: 8px; /*poderia uisar um gap: 8px no .bicicletas li q/ daria o mesmo*/
+}
+
+@media (max-width: 800px) {
+    /* retiro tudo er deixo apenas a cor q desejo*/
+    .bicicletas-bg {
+     background: var(--cor-11);
+    }
+    .bicicletas{
+        grid-template-columns: 1fr;
+        gap: 1.125rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .bicicletas-conteudo {
+        grid-template-columns: 1fr;
+    }
+    .bicicletas ul {
+        font-size: 1rem;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2rem;
+    }
+    .bicicletas a {
+        place-self: start;
+    }
 }
