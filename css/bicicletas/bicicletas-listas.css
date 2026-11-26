@@ -17,6 +17,10 @@
     overflow-x: auto;/*cria uma barra de rolagem horizontal apenas p/ essa área e ñ p/ o site todo, definindo como overflow-x: auto ele vai criar uma barra de scroll apenas no eixo X q/ é horizontal*/
 }
 
+#bicicleta .bicicletas-lista ul {
+    padding: 0px 0px 20px 0px;
+}
+
 /*Ñ qro q/ os elementos diminuam + do q/ já estão aqui, então falo c/ cada li (lembrando q/ li é o elemento flexível pq o pai (q/ é display flex o UL) q/ estão dentro do UL, */
 .bicicletas-lista li{
     flex: 1; 
