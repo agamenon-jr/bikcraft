@@ -1,0 +1,46 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.form label {
+    display: block;
+    font: 600 1rem/1.5 "Poppins", sans-serif;
+}
+
+.form .col-2 { 
+    grid-column: span 2; /* Onde eu colocar vai devinir de ponta a ponta, neste caso vou usar no email, mensage e botão; */
+}
+
+/* O input serve p/ vários tipos de input diferentes, ele serve p/ radio button, checkbox, input de data, etão é importante aqui no CSS dizer de qual tipo você qr estilizar, dai usamos o seletor de atributo parenteses [], aqui digo? todo input que tenha [type="texte"], [type="email"]; */
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    font: 400 1rem/1.5 "Roboto", sans-serif;
+    background: var(--cor-1);
+    border: 1px solid var(--cor-2);
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%; /*Quando coloquei assim ele estourou pq está somando com o padding, p/ resolver coloca um box-sizing: border-box; */
+    box-sizing: border-box;
+}
+
+/* Vou definir um estilo de foco q/ é parecido com o hover */
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+    outline: none;
+    border-color: var(--cor-p1);
+    background: var(--cor-0); /* Deixei assim pq quando for clicado vai evidenciar + a sombra*/
+    box-shadow: 0 0 0 2px #fea; /* Fica sendo duas bordas e vai dar um efeito de sombra */
+}
+
+@media (max-width: 600px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+    .form .col-2 {
+        grid-column: 1;
+    }
+}
